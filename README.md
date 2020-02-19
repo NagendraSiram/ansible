@@ -2,8 +2,6 @@
 
 > ansible-doc -l | more *(list all modules installed)*
 
-> ansible-doc -l | more *(list all modules installed)*
-
 > ansible-doc -s yum *(to learn about yum module)*
 
 > ansible appservers -m ping

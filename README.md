@@ -18,4 +18,4 @@
 
 > ansible -i /root/myhostfile all -m shell -a "uptime"
 
-> ansible -i /root/myhostfile -l server1 -m shell -a "uptime"
+> ansible -i /root/myhostfile -l onlyOneServer -m shell -a "uptime"

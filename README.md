@@ -19,3 +19,13 @@
 > ansible -i /root/myhostfile all -m shell -a "uptime"
 
 > ansible -i /root/myhostfile -l onlyOneServer -m shell -a "uptime"
+
+> ansible-playbook myplaybook.yml
+
+> ansible-playbook --help
+
+> ansible-playbook example.yml --tags "configuration,packages"
+
+> ansible-playbook example.yml --skip-tags "packages"
+
+> ansible-playbook example.yml --tags "configuration,packages" --list-tasks *(to list which tasks gets executed)*

@@ -18,7 +18,9 @@
 
 > ansible -i /root/myhostfile all -m shell -a "uptime"
 
-> ansible -i /root/myhostfile -l onlyOneServer -m shell -a "uptime"
+> ansible -i /root/myhostfile all -l onlyOneServer -m shell -a "uptime" *(limit to one host)*
+
+## playbook commands
 
 > ansible-playbook myplaybook.yml
 

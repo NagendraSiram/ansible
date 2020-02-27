@@ -1,0 +1,19 @@
+#Sample Ansible playbook with_items
+
+-
+ name: Install Packages
+ hosts: all_servers
+ tasks:
+    - name: Install all services
+      yum: name='{{ item }}' state=present
+      with_items:
+        - httpd
+        - binutils
+        - glibc
+        - ksh
+        - libaio
+        - gcc
+        - make
+        - mongodb
+        - nodejs
+        - grunt

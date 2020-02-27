@@ -1,0 +1,4 @@
+#Sample vars file
+
+http_port: 8080
+snmp_port: 160-161

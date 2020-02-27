@@ -1,0 +1,9 @@
+#Sample Ansible playbook 
+
+-
+ name: Play 1
+ hosts: all_servers
+ vars_files:
+    - variables.yml
+ tasks:
+    - include tasks.yml

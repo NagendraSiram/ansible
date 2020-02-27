@@ -1,0 +1,34 @@
+#Sample Ansible playbook 
+#1. How to use variables
+#2. How to use when
+#3. How to use register to save the task output
+
+-
+ name: Play 1
+ hosts: all_servers
+ tasks:
+    - name: Execute command 'date'
+      command: date
+
+    - name: Execute script on server
+      script: test_script.sh
+    
+    - name: Install httpd service
+      yum: 
+        name: httpd
+        state: present
+
+    - name: Start web server
+      service: 
+        name: httpd
+        state: started
+      when: ansible_host == 'web1.mycompany.com' or 
+            ansible_host == 'web2.mycompany.com'
+      register: service_output
+
+    - name: send email
+      mail: 
+        to: Admins <system.admin@mycompany.com>
+        subject: Service Alert
+        body: 'Service {{ ansible_hostname }} is down'
+      when: service_output.stdout.find('down') != -1

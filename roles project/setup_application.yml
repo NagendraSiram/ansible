@@ -1,0 +1,7 @@
+#Sample Ansible playbook setup_application.yml
+
+-
+ name: Play 1
+ hosts: web
+ roles:
+  - webservers

@@ -31,3 +31,7 @@
 > ansible-playbook example.yml --skip-tags "packages"
 
 > ansible-playbook example.yml --tags "configuration,packages" --list-tasks *(to list which tasks gets executed)*
+
+## Ansible Playable UI
+
+https://github.com/mmumshad/ansible-playable
